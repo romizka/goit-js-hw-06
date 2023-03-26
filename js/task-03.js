@@ -12,3 +12,14 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+const imgList = document.querySelector('ul')
+const imgLi = images
+.map((image) => `<li class="li-task-3"><img src= '${image.url}', alt= '${image.alt}', style="width:500px"> </>`)
+.join('');
+imgList.insertAdjacentHTML("beforeend", imgLi);
+
+console.log(imgLi);
+
+
