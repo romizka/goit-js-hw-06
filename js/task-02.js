@@ -7,12 +7,16 @@ const ingredients = [
   'Condiments',
 ];
 
+const liElements = [];
+const ingredientsList = document.getElementById('ingredients');
+
 for ( let i = 0; i < ingredients.length; i++) {
 const liEl =  document.createElement('li');
-const ingredientsList = document.getElementById('ingredients');
 liEl.textContent = ingredients[i];
 liEl.classList.add('item');
-ingredientsList.append(liEl);
+liElements.push(liEl);
 }
+
+ingredientsList.append(...liElements);
 
 
